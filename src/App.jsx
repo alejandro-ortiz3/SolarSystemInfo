@@ -9,7 +9,6 @@ function App() {
 
   return (
     <>
-      <div className="starfield"></div>
 
       <div className="App">
         <h1>The Solar System</h1>

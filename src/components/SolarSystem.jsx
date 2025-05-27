@@ -10,7 +10,6 @@ function SolarSystem({ planets, onSelect }) {
       </div>
 
       <div className="sun">
-        <img src="/images/sun.jpg" alt="Sun" />
       </div>
 
       {planets.map((planet, index) => (
