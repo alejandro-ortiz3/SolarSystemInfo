@@ -10,6 +10,12 @@ function Planet({ planet, orbitIndex, onSelect }) {
   const scaledSize = scaleFactor * 20;
   const displaySize = Math.max(12, Math.min(scaledSize, 30));
 
+  const playClickSound = () => {
+    const clickSound = new Audio('/audio/planet-click.wav');
+    clickSound.volume = 0.4;
+    clickSound.play();
+  };
+
   return (
     <>
       <div
@@ -25,7 +31,10 @@ function Planet({ planet, orbitIndex, onSelect }) {
           '--orbit-radius': `${orbitRadius}px`,
           animationDuration: `${duration}s`,
         }}
-        onClick={() => onSelect(planet)}
+        onClick={() => {
+          playClickSound();
+          onSelect(planet);
+        }}
       >
         <img
           src={planet.image}
