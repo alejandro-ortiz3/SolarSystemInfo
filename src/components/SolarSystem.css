@@ -1,0 +1,82 @@
+.solar-system {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 2rem auto;
+  background-color: rgba(0, 0, 0, 0.6); /* 0.0 = fully transparent, 1.0 = solid */
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: yellow;
+  z-index: 10;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-radius));
+  }
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-radius));
+  }
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.sun img {
+  width: 70px;  
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%; 
+}
+
+.planet-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+.planet img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}

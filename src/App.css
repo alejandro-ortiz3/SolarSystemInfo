@@ -1,0 +1,73 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  background: url('/images/starfield.jpg') center center / cover no-repeat fixed;
+  color: white;
+  font-family: system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.App {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.main-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.planet-info {
+  width: 300px;
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+h1, h2 {
+  position: relative;
+  display: inline-block;
+  color: #ccc;
+  background: linear-gradient(
+    90deg,
+    #ccc 0%,
+    #fff 50%,
+    #ccc 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+
+
+  line-height: 1.2;
+  padding: 0.2em 0;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: .9rem;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
