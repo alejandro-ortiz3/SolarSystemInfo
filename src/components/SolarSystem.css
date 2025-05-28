@@ -3,7 +3,6 @@
   width: 700px;
   height: 700px;
   margin: 2rem auto;
-  background-color: rgba(0, 0, 0, 0.7); 
   border-radius: 50%;
   overflow: visible;
 }
@@ -12,12 +11,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80px;
-  height: 80px;
+  width: 30px;
+  height: 30px;
   background: radial-gradient(circle, #ffd700, #ff9900);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 40px 20px rgba(255, 204, 0, 0.5);
+  box-shadow: 0 0 240px 100px rgba(255, 204, 0, 0.5);
   z-index: 2;
 }
 
@@ -27,7 +26,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: .5px dashed rgba(255, 255, 255, 0.046);
   border-radius: 50%;
   pointer-events: none;
 }

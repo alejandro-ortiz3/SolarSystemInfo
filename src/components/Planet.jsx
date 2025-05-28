@@ -7,8 +7,17 @@ function Planet({ planet, orbitIndex, onSelect }) {
 
 
   const scaleFactor = planet.radius / 6371;
-  const scaledSize = scaleFactor * 20;
-  const displaySize = Math.max(12, Math.min(scaledSize, 30));
+  const scaledSize = scaleFactor * 30;
+  const displaySize = Math.max(15, Math.min(scaledSize, 40));
+
+  const playPlanetSound = () => {
+    if (planet.audio) {
+      setTimeout(() => {
+        const sound = new Audio(planet.audio);
+        sound.play()
+      }, 3000);
+    }
+  }
 
   const playClickSound = () => {
     const clickSound = new Audio('/audio/planet-click.wav');
@@ -32,6 +41,7 @@ function Planet({ planet, orbitIndex, onSelect }) {
           animationDuration: `${duration}s`,
         }}
         onClick={() => {
+          playPlanetSound();
           playClickSound();
           onSelect(planet);
         }}
